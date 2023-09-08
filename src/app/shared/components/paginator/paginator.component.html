@@ -1,0 +1,13 @@
+
+<nav aria-label="pagination">
+  <ul class="pagination">
+    <li class="page-item"><a *ngIf="currentPage > 1" class="page-link" (click)="goToPage(currentPage - 1)">Previous</a></li>
+
+    <ng-container *ngFor="let item of pageList">
+      <li class="page-item" *ngIf="item !== currentPage"><a class="page-link" (click)="goToPage(item)">{{item}}</a></li>
+      <li class="page-item" *ngIf="item === currentPage"><a class="page-link no-link">{{currentPage}}</a></li>
+    </ng-container>
+
+    <li class="page-item"><a *ngIf="totalPages !== 1 && currentPage < totalPages" class="page-link" (click)="goToPage(currentPage + 1)">Next</a></li>
+  </ul>
+</nav>

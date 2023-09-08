@@ -1,0 +1,23 @@
+<ng-container *ngIf="movies?.length; then moviesCards; else noMovies"></ng-container>
+
+<ng-template #moviesCards>
+  <div class="movies">
+    <app-movie-card
+      *ngFor="let movie of movies"
+      [movie]="movie"
+      (addToFavorite)="onAddToFavorite($event)"
+      (removeToFavorite)="onRemoveToFavorite($event)"
+    />
+  </div>
+  <div class="movies__pagination">
+    <app-paginator
+      [totalPages]="totalPages"
+      [currentPage]="page"
+      (pageChanged)="goToPage($event)"
+    />
+  </div>
+</ng-template>
+
+<ng-template #noMovies>
+  <h2>There aren't movies to show</h2>
+</ng-template>

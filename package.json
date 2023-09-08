@@ -1,12 +1,15 @@
 {
-  "name": "sample-test",
+  "name": "sample-movies-tmdb",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test --code-coverage",
+    "test:ci": "ng test --karma-config ./karma.conf.ci.js --code-coverage",
+    "test:chorme": "ng test --karma-config ./karma.conf.chorme.js --code-coverage",
+    "test:firefox": "ng test --karma-config ./karma.conf.firefox.js --code-coverage"
   },
   "private": true,
   "dependencies": {
@@ -18,6 +21,7 @@
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "karma-firefox-launcher": "^2.1.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -33,6 +37,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "karma-mocha-reporter": "^2.2.5",
     "typescript": "~5.1.3"
   }
 }

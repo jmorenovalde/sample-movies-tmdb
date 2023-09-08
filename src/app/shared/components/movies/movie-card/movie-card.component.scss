@@ -1,0 +1,68 @@
+.movie-card {
+  width: calc(100% - 1.5rem);
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  min-height: 4rem;
+  text-align: center;
+  position: relative;
+
+  &:hover {
+    .movie-card__add-favorite {
+      color: pink;
+      cursor: pointer;
+    }
+    .movie-card__title {
+      background-color: white;
+      color: black;
+    }
+    .movie-card__rating {
+      color: rgb(169, 169, 45);
+    }
+  }
+
+  &__add-favorite {
+    position: absolute;
+    top: -0.5rem;
+    right: 0;
+    color: rgba(209, 200, 200, 0.511);
+    font-size: 3rem;
+    z-index: 2;
+  }
+
+  .movie-image {
+    position: relative;
+  }
+
+  &__is-adult {
+    position: absolute;
+    top: -0.5rem;
+    left: 0;
+    color: rgba(255,255,255, 0.511);
+    font-size: 3rem;
+    z-index: 2;
+  }
+
+  &__rating {
+    position: absolute;
+    z-index: 3;
+    background-color: transparent;
+    right: 0;
+    bottom: 0;
+    color: yellow;
+    padding: 0.3rem;
+  }
+
+  &__title {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+    margin: 0;
+    background-color: rgba(255,255,255, 0.35);
+    z-index: 2;
+    padding: 0.4rem;
+  }
+}

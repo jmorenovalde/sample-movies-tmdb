@@ -1,0 +1,21 @@
+<div class="movie-card card">
+  <div class="movie-image">
+    <img
+      class="card-img-top"
+      [src]="'https://image.tmdb.org/t/p/w500' + movie.poster_path"
+      [alt]="movie.title" />
+    <h5 class="movie-card__title card-title">{{movie.title}}</h5>
+  </div>
+  <div class="movie-card__add-favorite">
+    <a (click)="onClickAddToFavorite(!movie.isFavorite)">
+      <i class="bi" [ngClass]="{'bi-bookmark-heart': !movie.isFavorite, 'bi-bookmark-heart-fill': movie.isFavorite}"></i>
+    </a>
+  </div>
+  <div class="movie-card__is-adult" *ngIf="movie.adult">
+    <i class="bi bi-suit-diamond-fill"></i>
+    <i class="bi bi-suit-diamond-fill"></i>
+  </div>
+  <div class="movie-card__rating">
+    <app-rating [rate]="movie.vote_average" />
+  </div>
+</div>

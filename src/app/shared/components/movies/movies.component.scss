@@ -1,0 +1,13 @@
+.movies {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  &__pagination {
+    width: 100%;
+  }
+}
+
+app-movie-card {
+  width: 25%;
+}
