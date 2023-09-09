@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
 
-This project is a sample project for learning unit testing on Angular. This project only has a page that gets the films from the [The Movie Database](https://www.themoviedb.org/) (the Trending movies) and shows a simple grid.
+This project is a sample project for learning unit testing on Angular. This project only has a page that gets the films from [The Movie Database](https://www.themoviedb.org/) (the Trending movies) and shows a simple grid.
 
 For the styles, I used [Bootstrap](https://getbootstrap.com). It is not the best but it is easy and fast to implement.
 
