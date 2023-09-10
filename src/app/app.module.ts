@@ -7,6 +7,7 @@ import { MoviesComponent } from './shared/components/movies/movies.component';
 import { MovieCardComponent } from './shared/components/movies/movie-card/movie-card.component';
 import { RatingComponent } from './shared/components/rating/rating.component';
 import { PaginatorComponent } from './shared/components/paginator/paginator.component';
+import { RatingPipe } from './shared/components/rating/rating.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { PaginatorComponent } from './shared/components/paginator/paginator.comp
     MovieCardComponent,
     RatingComponent,
     PaginatorComponent,
+    RatingPipe,
   ],
   imports: [
     BrowserModule,

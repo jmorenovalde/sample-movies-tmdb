@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { ACCOUNT_ID, API_KEY, AUTHORIZATION } from '../config';
+import { ACCOUNT_ID, API_KEY, AUTHORIZATION } from '../../../config';
 
 import { ApiActionResponse, ApiResponse, Movie } from '../models';
 
